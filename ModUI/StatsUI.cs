@@ -19,8 +19,6 @@ namespace LevelingMod
 		public LabelUI defenseBoost;
 		public LabelUI minionsBoost;
 
-		public LabelUI mousePositionLabel;
-
 		public StatsUI(UIState uiState, UserInterface uiInterface, bool visibility)
 		{
 			backgroundImage = new ImageUI("LevelingMod/Assets/UIBackground", defaultPosition.X, defaultPosition.Y, uiState);
@@ -50,12 +48,6 @@ namespace LevelingMod
 			defenseBoost.origin.Y = -(padding*11);
 			defenseBoost.origin.X = -(padding);
 
-
-			mousePositionLabel = new LabelUI("X: 0 Y: 0", defaultPosition.X, defaultPosition.Y, uiState);
-			mousePositionLabel.origin.Y = -(padding*7);
-			mousePositionLabel.origin.X = -(padding);
-			mousePositionLabel.overlayColor = new Color(255, 0, 0);
-
 			backgroundImage.visible = visibility;
 			levelLabel.visible = visibility;
 			expLabel.visible = visibility;
@@ -63,7 +55,6 @@ namespace LevelingMod
 			healthBoostLabel.visible = visibility;
 			defenseBoost.visible = visibility;
 			minionsBoost.visible = visibility;
-			mousePositionLabel.visible = visibility;
 
 			uiInterface.SetState(uiState);
 
@@ -79,7 +70,6 @@ namespace LevelingMod
 			healthBoostLabel.Move(x, y);
 			defenseBoost.Move(x, y);
 			minionsBoost.Move(x, y);
-			mousePositionLabel.Move(x, y);
 		}
 
 		public void SetVisibility(bool visibility)
@@ -91,7 +81,6 @@ namespace LevelingMod
 			healthBoostLabel.visible = visibility;
 			defenseBoost.visible = visibility;
 			minionsBoost.visible = visibility;
-			mousePositionLabel.visible = visibility;
 		}
 
 		public bool GetVisibility()
