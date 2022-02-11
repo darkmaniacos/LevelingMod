@@ -1,3 +1,0 @@
-displayName = Leveling mod
-author = charptr
-version = 1.0
